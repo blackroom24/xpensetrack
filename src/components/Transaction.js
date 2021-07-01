@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Transaction = ({ transaction }) => {
+export const Transaction = ({ transaction, deleteTransaction }) => {
   const sign = transaction.amount > 0 ? '+' : '-';
   const liClass = transaction.amount > 0 ? 'plus' : 'minus';
   return (
@@ -9,7 +9,12 @@ export const Transaction = ({ transaction }) => {
       <span>
         {sign}${Math.abs(transaction.amount)}
       </span>
-      <button className="del-btn">x</button>
+      <button
+        onClick={() => deleteTransaction(transaction.id)}
+        className="del-btn"
+      >
+        x
+      </button>
     </li>
   );
 };
