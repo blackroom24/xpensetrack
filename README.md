@@ -1,6 +1,8 @@
 # Info
 
-This project was made using React to understand how React Context API works.
+A simple Expense Tracker.
+Demonstrating the use of React Context API & MongoDB
+This project was made using MERN.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
