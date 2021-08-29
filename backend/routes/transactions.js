@@ -8,6 +8,6 @@ const {
 const router = express.Router();
 
 router.route('/').get(getAllTransactions).post(addTransaction);
-router.route('/:id').delete(deleteTransaction);
+router.delete('/:id', deleteTransaction);
 
 module.exports = router;
