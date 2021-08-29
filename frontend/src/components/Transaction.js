@@ -1,4 +1,5 @@
 import React from 'react';
+import { currencyformatIN } from '../util';
 
 export const Transaction = ({ transaction, deleteTransaction }) => {
   const sign = transaction.amount > 0 ? '+' : '-';
@@ -7,7 +8,7 @@ export const Transaction = ({ transaction, deleteTransaction }) => {
     <li className={liClass}>
       {transaction.text}
       <span>
-        {sign}${Math.abs(transaction.amount)}
+        {sign}₹{currencyformatIN(Math.abs(transaction.amount))}
       </span>
       <button
         onClick={() => deleteTransaction(transaction._id)}
